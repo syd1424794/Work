@@ -1,0 +1,409 @@
+@font-face {
+  font-family: 'DINProBlack';
+  font-style: normal;
+  font-weight: normal;
+  src: local("DIN Pro Black"), url("../fonts/DINPro-Black.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'DINProBold';
+  font-style: normal;
+  font-weight: normal;
+  src: local("DIN Pro Bold"), url("../fonts/DINPro-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'DINProMedium';
+  font-style: normal;
+  font-weight: normal;
+  src: local("DIN Pro Medium"), url("../fonts/DINPro-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'DINProLight';
+  font-style: normal;
+  font-weight: normal;
+  src: local("DIN Pro Light"), url("../fonts/DINPro-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'DINPro';
+  font-style: normal;
+  font-weight: normal;
+  src: local("DIN Pro"), url("../fonts/DINPro.woff") format("woff");
+}
+
+.row {
+  margin-bottom: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'DinProBold';
+}
+
+body {
+  font-family: 'DINPro';
+  font-size: 1.6rem;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.info-container {
+  overflow: hidden;
+}
+
+.info-container .full-heading {
+  background: #555555;
+  margin: 0 -1rem;
+  padding: 1.2rem 3rem 1.2rem 1.5rem;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.info-container .full-heading .title i {
+  display: inline-block;
+  padding: .3rem;
+  background: #e1151d;
+  border-radius: 2px;
+  font-size: 2rem;
+}
+
+.info-container .full-heading .title span {
+  font-size: 1.8rem;
+  font-family: "DinProMedium";
+  margin-left: 8px;
+}
+
+.info-container .full-heading .icon span {
+  font-size: 1.4rem;
+  margin-right: .5rem;
+}
+
+.info-container .content {
+  background: #fff;
+  padding: 1.5rem;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-container .content .content-heading {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.info-container .content .label {
+  font-family: "DinProBold";
+}
+
+.info-container .content p {
+  margin: 0;
+}
+
+.main-container .sidenav {
+  width: 25rem;
+  background: #fff;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.main-container .sidenav .logo {
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.main-container .sidenav .logo img {
+  width: 20rem;
+}
+
+.main-container .sidenav .search {
+  padding: 1rem 2rem 0;
+  position: relative;
+}
+
+.main-container .sidenav .search input {
+  border: 1px solid #555555;
+  border-radius: 3rem;
+  height: 3.5rem;
+  padding: .5rem 1.5rem;
+  font-size: 1rem;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.main-container .sidenav .search input:focus {
+  border: 1px solid #e1151d;
+}
+
+.main-container .sidenav .search i {
+  font-size: 1.8rem;
+  position: absolute;
+  right: 3rem;
+  top: 1.7rem;
+}
+
+.main-container .sidenav .navigation {
+  margin-top: 20px;
+}
+
+.main-container .sidenav .navigation ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.main-container .sidenav .navigation ul li {
+  margin: .7rem 0;
+  float: left;
+  width: 100%;
+}
+
+.main-container .sidenav .navigation ul li a {
+  display: block;
+  color: #000000;
+  position: relative;
+  padding: .7rem 3rem;
+  font-family: 'DINProMedium';
+  transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+
+.main-container .sidenav .navigation ul li a i {
+  font-size: 2.5rem;
+  margin-right: 1.2rem;
+  position: relative;
+  top: .3rem;
+}
+
+.main-container .sidenav .navigation ul li a:after {
+  opacity: 0;
+  content: '';
+  width: .4rem;
+  height: 100%;
+  background: #e1151d;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.main-container .sidenav .navigation ul li a:hover {
+  background: #cccccc;
+  transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+
+.main-container .sidenav .navigation ul li a:hover i {
+  color: #e1151d;
+}
+
+.main-container .sidenav .navigation ul li a:hover:after {
+  opacity: 1;
+}
+
+.main-container .content-section {
+  padding: 0 1rem 0 26rem;
+  background: #f2edf3;
+  min-height: 100vh;
+}
+
+.main-container .content-section header {
+  padding: 10px 30px 10px 10px;
+  text-align: right;
+  background: #fff;
+  margin: 0 -1rem;
+}
+
+.main-container .content-section header .account-info {
+  display: inline-block;
+  font-size: 0;
+  text-align: left;
+}
+
+.main-container .content-section header .account-info .name {
+  display: inline-block;
+  padding-left: 10px;
+}
+
+.main-container .content-section header .account-info .name p {
+  font-size: 1.4rem;
+  color: #e1151d;
+  margin: 0;
+  font-family: "DinProMedium";
+}
+
+.main-container .content-section header .account-info .name span {
+  color: #555555;
+  font-size: 1.2rem;
+}
+
+.main-container .content-section header .account-info img {
+  display: inline-block;
+  width: 4.5rem;
+  vertical-align: top;
+}
+
+.c_tabs {
+  margin-top: 3rem;
+}
+
+.c_tabs .links ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+  font-size: 0;
+}
+
+.c_tabs .links ul li {
+  display: inline-block;
+}
+
+.c_tabs .links ul li:first-child a {
+  border-top-left-radius: 5px;
+}
+
+.c_tabs .links ul li:last-child a {
+  border-top-right-radius: 5px;
+}
+
+.c_tabs .links ul li a {
+  display: block;
+  color: #fff;
+  font-family: "DinProBold";
+  font-size: 1.8rem;
+  background: #333333;
+  padding: 0.4rem 2rem;
+  cursor: pointer;
+}
+
+.c_tabs .links ul li a.active {
+  background: #e1151d;
+}
+
+.c_tabs .links ul li a:hover {
+  color: #fff;
+}
+
+.custom-table {
+  max-height: 50rem;
+  overflow: auto;
+}
+
+.custom-table table {
+  font-size: 1.4rem;
+}
+
+.custom-table table thead tr th {
+  background: #ebebeb;
+  min-width: 15re;
+  font-size: 1.6rem;
+  vertical-align: middle;
+}
+
+.custom-table table tbody tr:nth-child(2n) td {
+  background: #ebebeb;
+}
+
+.custom-table table tbody tr td {
+  min-width: 15rem;
+  vertical-align: middle;
+}
+
+.custom-table table tbody tr td button {
+  background: #e1151d;
+  color: #fff;
+  padding: 0.3rem 3rem;
+  border: 1px solid #e1151d;
+  border-radius: 0.6rem;
+  box-shadow: 2px 2px 5px #777;
+  -moz-box-shadow: 2px 2px 5px #777;
+  -webkit-box-shadow: 2px 2px 5px #777;
+  -ms-box-shadow: 2px 2px 5px #777;
+  -o-box-shadow: 2px 2px 5px #777;
+}
+
+.metrics-card {
+  margin: 1rem 0;
+  padding: 1rem;
+  background: #e1151d;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+}
+
+.metrics-card.dark-level1 {
+  background: #ca131a;
+}
+
+.metrics-card.dark-level2 {
+  background: #b21117;
+}
+
+.metrics-card.dark-level3 {
+  background: #9b0e14;
+}
+
+.metrics-card.dark-level4 {
+  background: #840c11;
+}
+
+.metrics-card.dark-level5 {
+  background: #6c0a0e;
+}
+
+.metrics-card.dark-level6 {
+  background: #55080b;
+}
+
+.metrics-card .icon {
+  width: 30%;
+}
+
+.metrics-card .icon img {
+  width: 85%;
+  max-width: 5.5rem;
+}
+
+.metrics-card .desc {
+  padding-left: 1rem;
+}
+
+.metrics-card .desc .name {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+  min-height: 3.5rem;
+}
+
+.metrics-card .desc .value {
+  font-family: "DinProMedium";
+  font-size: 1.8rem;
+}
+/*# sourceMappingURL=main.css.map */

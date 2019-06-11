@@ -1,0 +1,382 @@
+$red: #e1151d;
+$gray-dark: #333333;
+$black: #000000;
+$light: #cccccc;
+$font-medium: 'DinProMedium';
+$font-bold: 'DinProBold';
+$bg-color: #f2edf3;
+$gray: #555555;
+$bg2: #ebebeb;
+
+@mixin transition($type, $time){
+    transition: $type $time;
+    -moz-transition: $type $time;
+    -webkit-transition: $type $time;
+    -ms-transition: $type $time;
+    -o-transition: $type $time;
+}
+
+@mixin box-shadow($x, $y, $z, $color){
+    box-shadow: $x $y $z $color;
+    -moz-box-shadow: $x $y $z $color;
+    -webkit-box-shadow: $x $y $z $color;
+    -ms-box-shadow: $x $y $z $color;
+    -o-box-shadow: $x $y $z $color;
+}
+
+@font-face {
+  font-family: 'DINProBlack';
+  font-style: normal;
+  font-weight: normal;
+  src: local("DIN Pro Black"), url("../fonts/DINPro-Black.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'DINProBold';
+  font-style: normal;
+  font-weight: normal;
+  src: local("DIN Pro Bold"), url("../fonts/DINPro-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'DINProMedium';
+  font-style: normal;
+  font-weight: normal;
+  src: local("DIN Pro Medium"), url("../fonts/DINPro-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'DINProLight';
+  font-style: normal;
+  font-weight: normal;
+  src: local("DIN Pro Light"), url("../fonts/DINPro-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'DINPro';
+  font-style: normal;
+  font-weight: normal;
+  src: local("DIN Pro"), url("../fonts/DINPro.woff") format("woff");
+}
+.row{
+    margin-bottom: 0;
+}
+html { font-size: 62.5%; } 
+h1,h2,h3,h4,h5{
+    font-family: 'DinProBold'; 
+}
+body {
+  font-family: 'DINPro';
+  font-size: 1.6rem;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.info-container{
+    overflow: hidden;
+    .full-heading{
+        background: $gray;
+        margin: 0 -1rem;
+        padding: 1.2rem 3rem 1.2rem 1.5rem;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .title{
+            i{
+                display: inline-block;
+                padding: .3rem;
+                background: $red;
+                border-radius: 2px;
+                font-size: 2rem;
+            }
+            span{
+                font-size: 1.8rem;
+                font-family: $font-medium;
+                margin-left: 8px;
+            }
+        }
+        .icon{
+            span{
+                font-size: 1.4rem;
+                margin-right: .5rem;
+            }
+        }
+    }
+
+    .content{
+        background: #fff;
+        padding: 1.5rem;
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+        .content-heading{
+            font-size: 20px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        .label{
+            font-family: $font-bold;
+        }
+        p{
+            margin: 0;
+        }
+    }
+}
+
+.main-container{
+    .sidenav{
+        width: 25rem; 
+        background: #fff;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 0;
+        .logo{
+            padding: 0 1rem;
+            text-align: center;
+            img{
+                width: 20rem;
+            }
+        }
+
+        .search{
+            padding: 1rem 2rem 0;
+            position: relative;
+            input{
+                border: 1px solid $gray;
+                border-radius: 3rem;
+                height: 3.5rem;
+                padding: .5rem 1.5rem;
+                font-size: 1rem;
+                width: 100%;
+                box-sizing: border-box;
+                &:focus{
+                    border: 1px solid $red;
+                }
+            }
+            i{
+                font-size: 1.8rem;
+                position: absolute;
+                right: 3rem;
+                top: 1.7rem;
+            }
+        }
+
+        .navigation{
+            margin-top: 20px;
+            ul{
+                list-style-type: none;
+                padding-left: 0;
+                margin: 0;
+                li{
+                    margin: .7rem 0;
+                    float: left;
+                    width: 100%;
+                    a{
+                        display: block;
+                        color: $black;
+                        position: relative;
+                        padding: .7rem 3rem;
+                        font-family: 'DINProMedium';
+                        @include transition(all, .3s);
+                        i{
+                            font-size: 2.5rem;
+                            margin-right: 1.2rem;
+                            position: relative;
+                            top: .3rem;
+                        }
+                        &:after{
+                            opacity: 0;
+                            content: '';
+                            width: .4rem;
+                            height: 100%;
+                            background: $red;
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                        }
+                        &:hover{
+                            background: $light;
+                            @include transition(all, .3s);
+                            i{
+                                color: $red;
+                            }
+                            &:after{
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .content-section{
+        padding:0 1rem 0 26rem;
+        background: $bg-color;
+        min-height: 100vh;
+        header{
+            padding: 10px 30px 10px 10px;
+            text-align: right;
+            background: #fff;
+            margin: 0 -1rem;
+            .account-info{
+                display: inline-block;
+                font-size: 0;
+                text-align: left;
+                .name{
+                    display: inline-block;
+                    padding-left: 10px;
+                    p{
+                        font-size: 1.4rem;
+                        color: $red;
+                        margin: 0;
+                        font-family: $font-medium;
+                    }
+                    span{
+                        color: $gray;
+                        font-size: 1.2rem;
+                    }
+                }
+                img{
+                    display: inline-block;
+                    width: 4.5rem;
+                    vertical-align: top;
+                }
+            }
+        }
+    }   
+}
+
+.c_tabs{
+    margin-top: 3rem;
+    .links{
+        ul{
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+            font-size: 0;
+            li{
+                display: inline-block;
+                &:first-child{
+                    a{
+                        border-top-left-radius: 5px;
+                    }
+                }
+                &:last-child{
+                    a{
+                        border-top-right-radius: 5px;
+                    }
+                }
+                a{
+                    display: block;
+                    color: #fff;
+                    font-family: $font-bold;
+                    font-size: 1.8rem;
+                    background: $gray-dark;
+                    padding: 0.4rem 2rem;
+                    cursor: pointer;
+                    &.active{
+                        background: $red;
+                    }
+                    &:hover{
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// TABLE CSS
+
+.custom-table{
+    max-height: 50rem;
+    overflow: auto;
+    table{
+        font-size: 1.4rem;
+        thead{
+            tr{
+                th{
+                    background: $bg2;
+                    min-width: 15re;;
+                    font-size: 1.6rem;
+                    vertical-align: middle;
+                }
+            }
+        }
+        tbody{
+            tr{
+                &:nth-child(2n){
+                   td{
+                       background: $bg2;
+                   } 
+                }
+                td{
+                    min-width: 15rem;
+                    vertical-align: middle;
+                    button{
+                        background: $red;
+                        color: #fff;
+                        padding: 0.3rem 3rem;
+                        border: 1px solid $red;
+                        border-radius: 0.6rem;
+                        @include box-shadow(2px, 2px, 5px, #777)
+                    }
+                }
+            }
+        }
+    }
+}
+
+// CARD CSS
+
+.metrics-card{
+    margin: 1rem 0;
+    padding: 1rem;
+    background: $red;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    &.dark-level1{
+        background: darken($red, 5%);
+    }
+    &.dark-level2{
+        background: darken($red, 10%);
+    }
+    &.dark-level3{
+        background: darken($red, 15%);
+    }
+    &.dark-level4{
+        background: darken($red, 20%);
+    }
+    &.dark-level5{
+        background: darken($red, 25%);
+    }
+    &.dark-level6{
+        background: darken($red, 30%);
+    }
+    .icon{
+        width: 30%;
+        img{
+            width: 85%;
+            max-width : 5.5rem;
+        }
+    }
+    .desc{
+        padding-left: 1rem;
+        .name{
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            line-height: 1.1;
+            min-height: 3.5rem;
+        }
+        .value{
+            font-family: $font-medium;
+            font-size: 1.8rem;
+        }
+    }
+}
